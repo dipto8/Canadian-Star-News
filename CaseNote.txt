@@ -1,0 +1,4 @@
+1.setup Project Env (Tailwind,Firebase,daisy UI,)
+2.  React Router setup 
+
+
