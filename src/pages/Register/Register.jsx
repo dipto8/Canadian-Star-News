@@ -1,35 +1,46 @@
-import React from "react";
-import Navbar from "../Navbar/Navbar";
 import { Link } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
 
-const Login = () => {
+const Register = () => {
   return (
     <div>
-      <Navbar></Navbar>
-      <div className=" lg:my-10 ">
-        <p className="text-3xl text-center font-semibold">Please Login</p>
+        <Navbar></Navbar>
+      <div className="my-10">
+        <h2 className="text-3xl font-semibold text-center ">Register</h2>
 
         <form className="card-body mx-auto lg: w-1/2">
+        <div className="form-control">
+            <label className="label">
+              <span className="label-text font-semibold">Name</span>
+            </label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter your Name"
+              className="input input-bordered"
+              required
+            />
+          </div>       
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Email</span>
+              <span className="label-text font-semibold">Email</span>
             </label>
             <input
               type="email"
               name="email"
-              placeholder="email"
+              placeholder="Email"
               className="input input-bordered"
               required
             />
           </div>
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Password</span>
+              <span className="label-text font-semibold">Password</span>
             </label>
             <input
               type="password"
               name="password"
-              placeholder="password"
+              placeholder="Password"
               className="input input-bordered"
               required
             />
@@ -43,10 +54,15 @@ const Login = () => {
             <button className="btn btn-primary">Login</button>
           </div>
         </form>
-        <p className="text-center">Don't have an Account? <Link className="text-blue-700 font-bold" to='/register'>Register</Link></p>
+        <p className="text-center">
+          Already have an Account?{" "}
+          <Link className="text-blue-700 font-bold" to="/login">
+           Login
+          </Link>
+        </p>
       </div>
     </div>
   );
 };
 
-export default Login;
+export default Register;
