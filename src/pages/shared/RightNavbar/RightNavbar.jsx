@@ -19,25 +19,25 @@ const RightNavbar = () => {
         </button>
       </div>
 
-      <div id="Social media links" className=" my-3 p-3 ">
+      <div id="Social media links" className=" my-3 p-1 ">
         <h2 className="text-2xl text-center font-semibold mb-2">Find Us </h2>
         <div className=" flex flex-col  ">
           <a
-            className="border-gray-400 border rounded-t-lg  flex items-center gap-2 p-3"
+            className="border-gray-300 border rounded-t-lg  flex items-center gap-2 p-3"
             href=""
           >
             <FaInstagram />
             <span>Instragram</span>
           </a>
           <a
-            className="border-gray-400 border border-x  flex items-center gap-2 p-3 "
+            className="border-gray-300 border border-x  flex items-center gap-2 p-3 "
             href=""
           >
             <FaFacebook />
             <span>Facebook</span>
           </a>
           <a
-            className="border-gray-400 border rounded-b-lg  flex items-center gap-2 p-3"
+            className="border-gray-300 border rounded-b-lg  flex items-center gap-2 p-3"
             href=""
           >
             <FaInstagram />
