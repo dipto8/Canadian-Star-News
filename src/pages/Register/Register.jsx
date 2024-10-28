@@ -2,13 +2,22 @@ import { Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 
 const Register = () => {
+    const handleRegister = (e)=>{
+        e.preventDefault();
+        const form = new FormData(e.currentTarget);
+        const name = form.get('name');
+        const email = form.get('email');
+        const password = form.get('password');
+     
+
+    }
   return (
     <div>
         <Navbar></Navbar>
-      <div className="my-10">
+      <div className=" lg:my-10">
         <h2 className="text-3xl font-semibold text-center ">Register</h2>
 
-        <form className="card-body mx-auto lg: w-1/2">
+        <form onSubmit={handleRegister} className="card-body mx-auto lg: w-1/2">
         <div className="form-control">
             <label className="label">
               <span className="label-text font-semibold">Name</span>
@@ -51,7 +60,7 @@ const Register = () => {
             </label>
           </div>
           <div className="form-control mt-6">
-            <button className="btn btn-primary">Login</button>
+            <button className="btn btn-primary">Register</button>
           </div>
         </form>
         <p className="text-center">

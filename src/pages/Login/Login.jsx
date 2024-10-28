@@ -3,13 +3,16 @@ import Navbar from "../Navbar/Navbar";
 import { Link } from "react-router-dom";
 
 const Login = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const form = new FormData(e.currentTarget);
+  };
   return (
     <div>
       <Navbar></Navbar>
       <div className=" lg:my-10 ">
         <p className="text-3xl text-center font-semibold">Please Login</p>
-
-        <form className="card-body mx-auto lg: w-1/2">
+        <form onSubmit={handleLogin} className="card-body mx-auto lg: w-1/2">
           <div className="form-control">
             <label className="label">
               <span className="label-text">Email</span>
@@ -43,7 +46,12 @@ const Login = () => {
             <button className="btn btn-primary">Login</button>
           </div>
         </form>
-        <p className="text-center">Don't have an Account? <Link className="text-blue-700 font-bold" to='/register'>Register</Link></p>
+        <p className="text-center">
+          Don't have an Account?{" "}
+          <Link className="text-blue-700 font-bold" to="/register">
+            Register
+          </Link>
+        </p>
       </div>
     </div>
   );
