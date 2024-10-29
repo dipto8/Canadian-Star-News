@@ -6,6 +6,7 @@ const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
+    console.log(form.get('email'))
   };
   return (
     <div>

@@ -11,7 +11,7 @@ const MainContent = () => {
     return (
         <div>
             <p>News Coming soon... {Newses.length}</p>
-        {    
+        {/* {    
             Newses.map(news=> 
             <div>
                 <div className="">
@@ -20,7 +20,7 @@ const MainContent = () => {
             </div>
             )
 
-        }
+        } */}
             
         </div>
     );
